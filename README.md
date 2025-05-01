@@ -35,6 +35,8 @@ Enter the following command in the temrinal:
 python3 ocr.py
 ```
 
+Soon, you will get a response from the ML model! It will happen in the terminal window.
+
 You can change which file is viewed by editing line 34 of `ocr.py`
 
 **Note:** I've found the OCR process to take minutes at a time. So, be patient!
