@@ -1,4 +1,5 @@
 import base64
+import os
 import requests
 from PIL import Image
 
@@ -15,7 +16,7 @@ def perform_ocr(image_path):
     """Perform OCR on the given image using Llama 3.2-Vision."""
     base64_image = encode_image_to_base64(image_path)
     response = requests.post(
-        "http://localhost:11434/api/generate",  # Ensure this URL matches your Ollama service endpoint
+        "http://localhost:11434/api/generate",
         json={
             "model": "llama3.2-vision",
             "stream" : False,
@@ -31,7 +32,7 @@ def perform_ocr(image_path):
         return None
 
 if __name__ == "__main__":
-    image_path = "/Users/jimmypatterson/Documents/dev/offline-llama-ocr/dots candy package.jpg"  # Replace with your image path
+    image_path = os.getcwd() + "/images/dots candy package.jpg"
     result = perform_ocr(image_path)
     if result:
         print("OCR Recognition Result:")

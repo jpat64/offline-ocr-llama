@@ -19,7 +19,6 @@ How to Download Packages: [link](https://packaging.python.org/en/latest/tutorial
 #### Download Pillow and requests
 In your terminal, run the following commands:
 ```
-python3 -m venv tutorial_env
 pip install Pillow
 pip install requests
 ```
